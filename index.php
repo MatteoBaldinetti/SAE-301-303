@@ -10,7 +10,7 @@
         <div class=container>
             <div class="row">
                 <div class="col-md-12 p-0">
-                    <canvas id="myChart" class="mt-5 mb-5 h-auto w-100"></canvas>
+                    <canvas id="myChart" class="mt-5 mb-5 h-auto w-75"></canvas>
                 </div>
             </div>
         </div>
