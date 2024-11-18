@@ -6,6 +6,7 @@ Table methodes {
   nom_methode varchar
   nom_famille varchar
   sous_famille varchar
+  autre_caracteristique varchar
 }
 
 table culture {
@@ -24,6 +25,7 @@ table cible {
 table projet {
   id int [pk, not null, increment]
   nom_projet varchar
+  nom_system varchar
   periode timestamp
   site_experimental varchar
   code_postal int
@@ -47,3 +49,5 @@ table application {
 ref: methodes.id <> projet.id
 ref: methodes.id <> cible.id
 ref: methodes.id <> culture.id
+ref: methodes.id <> traitement.id
+ref: methodes.id <> application.id
