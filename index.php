@@ -24,6 +24,35 @@
                             <h3 class="ps-1 position-absolute top-50 start-0 translate-middle-y">Pestisee</h3>
                         </div>
                     </div>
+                    <div class="row pt-5">
+                        <div class="col-md-12">
+                            <a href="#" class="tabsLinks">🍅 1er onglet</a>
+                            <hr />
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <a href="#" class="tabsLinks">🍎 2ème onglet</a>
+                            <hr />
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <a href="#" class="tabsLinks">🌽 3ème onglet</a>
+                            <hr />
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <a href="#" class="tabsLinks">🥕 4ème onglet</p>
+                            <hr />
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <a href="#" class="tabsLinks">🍇 5ème onglet</a>
+                        </div>
+                    </div>
                 </div>
                 <div class="col-md-9">
                     <div class="row ps-3">
