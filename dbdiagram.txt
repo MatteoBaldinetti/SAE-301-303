@@ -1,0 +1,20 @@
+Table methodes {
+  id int [not null, pk, increment]
+  nom_methode varchar
+  nom_famille varchar
+  sous_famille varchar
+  avis varchar
+}
+
+table culture {
+  id int [pk, not null, increment]
+  cultures varchar
+  filiere varchar
+  
+}
+
+table cible {
+  id int [pk, not null, increment]
+  cible_principale varchar
+  groupe_cible varchar
+}
