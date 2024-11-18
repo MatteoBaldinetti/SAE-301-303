@@ -1,0 +1,21 @@
+body {
+    background-color: #F8F8F8;
+}
+
+.whiteBackground {
+    background-color: white;
+}
+
+.greenBackground {
+    background-color: #6e9857;
+}
+
+.shadowGraph {
+    box-shadow: 2px 3px 3px #A8A8A8;
+}
+
+.verticalCenter {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}

@@ -1,52 +1,85 @@
-var ctx = document.getElementById('myChart').getContext('2d');
-var myChart = new Chart(ctx, {
-type: 'bar',
-data: {
-    labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+let ctx = document.getElementById('graph1').getContext('2d');
+
+const data = {
+    labels: [
+      'Red',
+      'Blue',
+      'Yellow'
+    ],
     datasets: [{
-        label: '# of Votes',
-        data: [12, 19, 3, 5, 2, 3],
-        backgroundColor: [
-            'rgba(255, 99, 132, 1)',
-            'rgba(54, 162, 235, 1)',
-            'rgba(255, 206, 86, 1)',
-            'rgba(75, 192, 192, 1)',
-            'rgba(153, 102, 255, 1)',
-            'rgba(255, 159, 64, 1)'
-        ],
-        borderColor: [
-            'rgba(255, 99, 132, 1)',
-            'rgba(54, 162, 235, 1)',
-            'rgba(255, 206, 86, 1)',
-            'rgba(75, 192, 192, 1)',
-            'rgba(153, 102, 255, 1)',
-            'rgba(255, 159, 64, 1)'
-        ],
-        borderWidth: 1
+      label: 'My First Dataset',
+      data: [300, 50, 100],
+      backgroundColor: [
+        'rgb(255, 99, 132)',
+        'rgb(54, 162, 235)',
+        'rgb(255, 205, 86)'
+      ],
+      hoverOffset: 4
     }]
-},
-options: {
-    scales: {
-        yAxes: [{
-            ticks: {
-                beginAtZero: true,
-                fontColor: '#000000'
-            },
-            gridLines: {
-                zeroLineColor: '#000000'
-            }
-        }],
-        xAxes: [{
-            ticks: {
-                fontColor: '#000000'
-            },
-            gridLines: {
-                zeroLineColor: '#000000'
-            }
-        }]
-    },
-    legend: {
-        position: 'bottom'
+  };
+
+const graph1 = new Chart(ctx, {
+    type: "pie",
+    data: data,
+    options: {
+        responsive: true,
     }
-}
-});
+}) 
+
+let ctx2 = document.getElementById('graph2').getContext('2d');
+
+const data2 = {
+    labels: ["January", "February", "March", "April", "Mai", "June", "July"],
+    datasets: [{
+      label: 'My First Dataset',
+      data: [65, 59, 80, 81, 56, 55, 40],
+      backgroundColor: [
+        'rgba(255, 99, 132, 0.2)',
+        'rgba(255, 159, 64, 0.2)',
+        'rgba(255, 205, 86, 0.2)',
+        'rgba(75, 192, 192, 0.2)',
+        'rgba(54, 162, 235, 0.2)',
+        'rgba(153, 102, 255, 0.2)',
+        'rgba(201, 203, 207, 0.2)'
+      ],
+      borderColor: [
+        'rgb(255, 99, 132)',
+        'rgb(255, 159, 64)',
+        'rgb(255, 205, 86)',
+        'rgb(75, 192, 192)',
+        'rgb(54, 162, 235)',
+        'rgb(153, 102, 255)',
+        'rgb(201, 203, 207)'
+      ],
+      borderWidth: 1
+    }]
+  };
+
+const graph2 = new Chart(ctx2, {
+    type: "bar",
+    data: data2,
+    options: {
+        responsive: true,
+    }
+}) 
+
+let ctx3 = document.getElementById('graph3').getContext('2d');
+
+const data3 = {
+  labels: ["January", "February", "March", "April", "Mai", "June", "July"],
+  datasets: [{
+    label: 'My First Dataset',
+    data: [65, 59, 80, 81, 56, 55, 40],
+    fill: false,
+    borderColor: 'rgb(75, 192, 192)',
+    tension: 0.1
+  }]
+};
+
+const graph3 = new Chart(ctx3, {
+  type: "line",
+  data: data3,
+  options: {
+      responsive: true,
+  }
+})
