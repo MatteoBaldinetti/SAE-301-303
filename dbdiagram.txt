@@ -2,7 +2,7 @@
 // Docs: https://dbml.dbdiagram.io/docs
 
 Table methodes {
-  id int [not null, pk, increment]
+  id_methode int [not null, pk, increment]
   nom_methode varchar
   nom_famille varchar
   sous_famille varchar
@@ -10,20 +10,20 @@ Table methodes {
 }
 
 table culture {
-  id int [pk, not null, increment]
+  id_culture int [pk, not null, increment]
   cultures varchar
   filiere varchar
   terre_abri varchar
 }
 
 table cible {
-  id int [pk, not null, increment]
+  id_cible int [pk, not null, increment]
   cible_principale varchar
   groupe_cible varchar
 }
 
 table projet {
-  id int [pk, not null, increment]
+  id_projet int [pk, not null, increment]
   nom_projet varchar
   nom_system varchar
   periode timestamp
@@ -32,22 +32,22 @@ table projet {
 }
 
 table traitement {
-  id int [pk, not null, increment]
+  id_traitement int [pk, not null, increment]
   type varchar
   partie varchar
   mode_action varchar
 }
 
 table application {
-  id int [pk, not null, increment]
+  id_application int [pk, not null, increment]
   stade varchar
   nombre int
   dose varchar
   rdd_aod varchar
 }
 
-ref: methodes.id <> projet.id
-ref: traitement.id <> cible.id
-ref: traitement.id <> culture.id
-ref: methodes.id <> traitement.id
-ref: traitement.id <> application.id
+ref: methodes.id_methode <> projet.id_projet
+ref: traitement.id_traitement <> cible.id_cible
+ref: traitement.id_traitement <> culture.id_culture
+ref: methodes.id_methode <> traitement.id_traitement
+ref: traitement.id_traitement <> application.id_application
