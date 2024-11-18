@@ -20,3 +20,14 @@ body {
     top: 50%;
     transform: translateY(-50%);
 }
+
+.tabsLinks {
+    text-decoration: none;
+    color: white;
+}
+
+.tabsLinks:hover {
+    text-decoration: none;
+    color: rgb(197, 197, 197);
+    transition: all 0.3s;
+}
