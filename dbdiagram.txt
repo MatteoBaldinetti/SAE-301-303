@@ -31,10 +31,17 @@ table projet {
 
 table traitement {
   id int [pk, not null, increment]
+  type varchar
+  partie varchar
+  mode_action varchar
 }
 
 table application {
   id int [pk, not null, increment]
+  stade varchar
+  nombre int
+  dose varchar
+  rdd_aod varchar
 }
 
 ref: methodes.id <> projet.id
