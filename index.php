@@ -44,7 +44,7 @@
                     </div>
                     <div class="row">
                         <div class="col-md-12">
-                            <a href="#" class="tabsLinks">🥕 4ème onglet</p>
+                            <a href="#" class="tabsLinks">🥕 4ème onglet</a>
                             <hr />
                         </div>
                     </div>
