@@ -29,6 +29,14 @@ table projet {
   code_postal int
 }
 
+table traitement {
+  id int [pk, not null, increment]
+}
+
+table application {
+  id int [pk, not null, increment]
+}
+
 ref: methodes.id <> projet.id
 ref: methodes.id <> cible.id
 ref: methodes.id <> culture.id
