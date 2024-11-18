@@ -1,0 +1,53 @@
+// Use DBML to define your database structure
+// Docs: https://dbml.dbdiagram.io/docs
+
+Table methodes {
+  id int [not null, pk, increment]
+  nom_methode varchar
+  nom_famille varchar
+  sous_famille varchar
+  autre_caracteristique varchar
+}
+
+table culture {
+  id int [pk, not null, increment]
+  cultures varchar
+  filiere varchar
+  terre_abri varchar
+}
+
+table cible {
+  id int [pk, not null, increment]
+  cible_principale varchar
+  groupe_cible varchar
+}
+
+table projet {
+  id int [pk, not null, increment]
+  nom_projet varchar
+  nom_system varchar
+  periode timestamp
+  site_experimental varchar
+  code_postal int
+}
+
+table traitement {
+  id int [pk, not null, increment]
+  type varchar
+  partie varchar
+  mode_action varchar
+}
+
+table application {
+  id int [pk, not null, increment]
+  stade varchar
+  nombre int
+  dose varchar
+  rdd_aod varchar
+}
+
+ref: methodes.id <> projet.id
+ref: methodes.id <> cible.id
+ref: methodes.id <> culture.id
+ref: methodes.id <> traitement.id
+ref: methodes.id <> application.id
