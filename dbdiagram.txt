@@ -1,16 +1,18 @@
+// Use DBML to define your database structure
+// Docs: https://dbml.dbdiagram.io/docs
+
 Table methodes {
   id int [not null, pk, increment]
   nom_methode varchar
   nom_famille varchar
   sous_famille varchar
-  avis varchar
 }
 
 table culture {
   id int [pk, not null, increment]
   cultures varchar
   filiere varchar
-  
+  terre_abri varchar
 }
 
 table cible {
@@ -18,3 +20,15 @@ table cible {
   cible_principale varchar
   groupe_cible varchar
 }
+
+table projet {
+  id int [pk, not null, increment]
+  nom_projet varchar
+  periode timestamp
+  site_experimental varchar
+  code_postal int
+}
+
+ref: methodes.id <> projet.id
+ref: methodes.id <> cible.id
+ref: methodes.id <> culture.id
