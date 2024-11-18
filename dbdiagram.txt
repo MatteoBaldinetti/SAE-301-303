@@ -47,7 +47,7 @@ table application {
 }
 
 ref: methodes.id <> projet.id
-ref: methodes.id <> cible.id
-ref: methodes.id <> culture.id
+ref: traitement.id <> cible.id
+ref: traitement.id <> culture.id
 ref: methodes.id <> traitement.id
-ref: methodes.id <> application.id
+ref: traitement.id <> application.id
