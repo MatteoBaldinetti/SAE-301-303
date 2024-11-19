@@ -25,9 +25,7 @@ table cible {
 table projet {
   id_projet int [pk, not null, increment]
   nom_projet varchar
-  nom_system varchar
-  periode timestamp
-  site_experimental varchar
+  periode varchar
   code_postal int
 }
 
@@ -43,11 +41,19 @@ table application {
   stade varchar
   nombre int
   dose varchar
-  rdd_aod varchar
+  rdd_oad varchar
+}
+
+table experimentation {
+  id_experimentation int [pk, not null, increment]
+  nom_system varchar
+  site_experimental varchar
+  lien varchar
 }
 
 ref: methodes.id_methode <> projet.id_projet
-ref: traitement.id_traitement <> cible.id_cible
-ref: traitement.id_traitement <> culture.id_culture
-ref: methodes.id_methode <> traitement.id_traitement
-ref: traitement.id_traitement <> application.id_application
+ref: application.id_application <> methodes.id_methode
+ref: methodes.id_methode <> cible.id_cible
+ref: experimentation.id_experimentation <> projet.id_projet
+ref: culture.id_culture <> projet.id_projet
+ref: traitement.id_traitement <> methodes.id_methode
