@@ -11,6 +11,10 @@ body {
     background-color: #6e9857;
 }
 
+.footer {
+    background-color: #232528;
+}
+
 .shadowGraph {
     box-shadow: 2px 3px 3px #A8A8A8;
 }
@@ -40,4 +44,27 @@ body {
 .returnLink:hover {
     color: rgb(197, 197, 197);
     transition: all 0.3s;
+}
+
+.smallChartBox {
+    height: 15em;
+    width: 26em;
+    margin: auto;
+}
+
+.bigChartBox {
+    height: 27em;
+    width: auto;
+}
+
+.swiper {
+    width: 100%;
+    height: 100%;
+  }
+
+.swiper-slide {
+font-size: 18px;
+background: #fff;
+justify-content: center;
+align-items: center;
 }

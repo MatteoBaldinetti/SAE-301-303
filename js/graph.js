@@ -22,6 +22,7 @@ const graph1 = new Chart(ctx, {
     type: "pie",
     data: data,
     options: {
+        maintainAspectRatio: false,
         responsive: true,
     }
 }) 
@@ -59,6 +60,7 @@ const graph2 = new Chart(ctx2, {
     type: "bar",
     data: data2,
     options: {
+        maintainAspectRatio: false,
         responsive: true,
     }
 }) 
@@ -80,6 +82,36 @@ const graph3 = new Chart(ctx3, {
   type: "line",
   data: data3,
   options: {
+      maintainAspectRatio: false,
       responsive: true,
   }
 })
+
+let ctx4 = document.getElementById('graph4').getContext('2d');
+
+const data4 = {
+  labels: [
+    'Purple',
+    'Green',
+    'Cyan'
+  ],
+  datasets: [{
+    label: 'My First Dataset',
+    data: [50, 100, 70],
+    backgroundColor: [
+      'rgb(255, 0, 255)',
+      'rgb(0, 255, 0)',
+      'rgb(0, 255, 255)'
+    ],
+    hoverOffset: 4
+  }]
+};
+
+const graph4 = new Chart(ctx4, {
+  type: "pie",
+  data: data4,
+  options: {
+      maintainAspectRatio: false,
+      responsive: true,
+  }
+}) 

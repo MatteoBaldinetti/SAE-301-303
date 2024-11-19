@@ -8,10 +8,10 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Geologica:wght@100..900&family=Girassol&display=swap" rel="stylesheet">
-        <!---->
         <!--Importation de Animate.css qui permet des animations au chargement de la page-->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
-        <!---->
+        <!--Importation de Swiper JS afin de faire facilement des carrousels-->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
         <link href="./css/style.css" rel="stylesheet">
     </head>
@@ -58,7 +58,7 @@
                     </div>
                     <div class="row mt-5">
                         <div class="col-md-12 mt-5">
-                            <a href="#" class="returnLink"><i class="fa-solid fa-arrow-left me-2"></i>Retour</a>
+                            <a href="#" class="returnLink ms-2"><i class="fa-solid fa-arrow-left me-2"></i>Retour</a>
                         </div>
                     </div>
                 </div>
@@ -70,27 +70,68 @@
                     </div>
                     <div class="row mt-3 ps-3 pe-3">
                         <div class="col-md-5 pb-3 me-3 whiteBackground shadowGraph animate__animated animate__zoomIn">
-                            <h4 class="mt-3 ps-3">Titre du graphe</h4>
-                            <canvas id="graph1"></canvas>
+                            <div class="swiper mySwiper">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <h4 class="mt-3 ps-3">Titre du graphe</h4>
+                                        <div class="smallChartBox">
+                                            <canvas id="graph1"></canvas>
+                                        </div> 
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <h4 class="mt-3 ps-3">Titre du graphe</h4>
+                                        <div class="smallChartBox">
+                                            <canvas id="graph4"></canvas>
+                                        </div> 
+                                    </div>
+                                </div>
+                                <div class="swiper-button-next"></div>
+                                <div class="swiper-button-prev"></div>
+                            </div>
                         </div>
                         <div class="col-md-6 pb-3 whiteBackground shadowGraph position-relative animate__animated animate__zoomIn" style="flex-grow: 1">
-                            <h4 class="mt-3 ps-3">Titre du graphe</h4>
-                            <canvas id="graph2" class="verticalCenter"></canvas>
+                            <div class="swiper mySwiper">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <h4 class="mt-3 ps-3">Titre du graphe</h4>
+                                        <div class="smallChartBox">
+                                            <canvas id="graph2"></canvas>
+                                        </div> 
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <h4 class="mt-3 ps-3">Titre du graphe</h4>
+                                        <div class="smallChartBox">
+                                            <p>test</p>
+                                        </div> 
+                                    </div>
+                                </div>
+                                <div class="swiper-button-next"></div>
+                                <div class="swiper-button-prev"></div>
+                            </div>
                         </div>
                     </div>
                     <div class="row mt-4 ps-3 pe-3">
                         <div class="col-md-12 pb-3 mb-5 whiteBackground shadowGraph animate__animated animate__zoomIn">
                             <h4 class="mt-3 ps-3">Titre du graphe</h4>
-                            <canvas id="graph3"></canvas>
+                            <div class="bigChartBox">
+                                <canvas id="graph3"></canvas>
+                            </div>
                         </div>
                     </div>
+                </div>
+            </div>
+            <div class="row footer">
+                <div class="col-md-12 mt-5">
+                    <p class="text-center text-white pb-3">Site réalisé dans le cadre de la SAE 301-303 par<br/>Mattéo BALDINETTI, Liam CHEURFA, Ken DINH & Vincent ROURE</p>
                 </div>
             </div>
         </div>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
         <!--Importation de FontAwesome afin d'avoir des pyctogrammes facilement-->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.0/js/all.min.js" integrity="sha512-8py0AXTY8pfAroJmBkYfJ+VuKUKMMsUOC1MldW9kkC/k4SZi6AexSDS60QYn41U2rp8KL9IpVHy8FxW2TDmjDA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-        <!---->
+        <!--Importation de Swiper JS afin de faire facilement des carrousels-->
+        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+        <script src="./js/swiper.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.1/chart.min.js" integrity="sha512-QSkVNOCYLtj73J4hbmVoOV6KVZuMluZlioC+trLpewV8qMjsWqlIQvkn1KGX2StWvPMdWGBqim1xlC8krl1EKQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
         <script src="./js/graph.js"></script>
     </body>
