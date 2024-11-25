@@ -3,6 +3,10 @@ body {
     font-family: "Geologica", sans-serif;
 }
 
+h4 {
+    font-size: 1.5em;
+}
+
 .whiteBackground {
     background-color: white;
 }
@@ -64,8 +68,12 @@ body {
   }
 
 .swiper-slide {
-font-size: 18px;
-background: #fff;
-justify-content: center;
-align-items: center;
+    text-align: center;
+    background: #fff;
+    justify-content: center;
+    align-items: center;
+}
+
+.maximiseButton, .minimizeButton {
+    cursor: pointer;
 }

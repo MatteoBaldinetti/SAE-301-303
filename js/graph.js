@@ -1,6 +1,6 @@
-let ctx = document.getElementById('graph1').getContext('2d');
+var ctx = document.getElementById('graph1').getContext('2d');
 
-const data = {
+var data = {
     labels: [
       'Red',
       'Blue',
@@ -18,7 +18,7 @@ const data = {
     }]
   };
 
-const graph1 = new Chart(ctx, {
+var graph1 = new Chart(ctx, {
     type: "pie",
     data: data,
     options: {
@@ -27,9 +27,9 @@ const graph1 = new Chart(ctx, {
     }
 }) 
 
-let ctx2 = document.getElementById('graph2').getContext('2d');
+var ctx2 = document.getElementById('graph2').getContext('2d');
 
-const data2 = {
+var data2 = {
     labels: ["January", "February", "March", "April", "Mai", "June", "July"],
     datasets: [{
       label: 'My First Dataset',
@@ -56,7 +56,7 @@ const data2 = {
     }]
   };
 
-const graph2 = new Chart(ctx2, {
+var graph2 = new Chart(ctx2, {
     type: "bar",
     data: data2,
     options: {
@@ -65,9 +65,9 @@ const graph2 = new Chart(ctx2, {
     }
 }) 
 
-let ctx3 = document.getElementById('graph3').getContext('2d');
+var ctx3 = document.getElementById('graph3').getContext('2d');
 
-const data3 = {
+var data3 = {
   labels: ["January", "February", "March", "April", "Mai", "June", "July"],
   datasets: [{
     label: 'My First Dataset',
@@ -78,7 +78,7 @@ const data3 = {
   }]
 };
 
-const graph3 = new Chart(ctx3, {
+var graph3 = new Chart(ctx3, {
   type: "line",
   data: data3,
   options: {
@@ -87,9 +87,9 @@ const graph3 = new Chart(ctx3, {
   }
 })
 
-let ctx4 = document.getElementById('graph4').getContext('2d');
+var ctx4 = document.getElementById('graph4').getContext('2d');
 
-const data4 = {
+var data4 = {
   labels: [
     'Purple',
     'Green',
@@ -107,7 +107,7 @@ const data4 = {
   }]
 };
 
-const graph4 = new Chart(ctx4, {
+var graph4 = new Chart(ctx4, {
   type: "pie",
   data: data4,
   options: {
@@ -115,3 +115,10 @@ const graph4 = new Chart(ctx4, {
       responsive: true,
   }
 }) 
+
+function destroyGraph() {
+  graph1.destroy()
+  graph2.destroy()
+  graph3.destroy()
+  graph4.destroy()
+}
