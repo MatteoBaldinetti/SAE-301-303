@@ -2,7 +2,7 @@ const maximiseButtonList = document.querySelectorAll(".maximiseButton");
 const minimizeButtonList = document.querySelectorAll(".minimizeButton");
 const chartContainer1 = document.getElementById("chartContainer1");
 const chartContainer2 = document.getElementById("chartContainer2");
-const graphJSFile = document.getElementById("graphJSFile")
+var position = null
 
 function setupListener() {
     for (let i=0; i<maximiseButtonList.length; i++) {
@@ -28,6 +28,16 @@ function getGraph(maximiseButton) {
     }
 }
 
+function reloadGraph() {
+    destroyGraph()
+    let graphJSFile = document.getElementById("graphJSFile")
+    graphJSFile.remove()
+    newScript = document.createElement('script');
+    newScript.id = graphJSFile.id;
+    newScript.src = graphJSFile.src;
+    document.body.appendChild(newScript);
+}
+
 function displayChartContainer() {
     chartContainer1.classList.toggle("d-none");
     chartContainer2.classList.toggle("d-none");
@@ -38,10 +48,12 @@ function changeDisplay(maximiseButton) {
     let replaceGraph = document.getElementById("replaceGraph");
     replaceGraph.id = graph.id;
     graph.id = "replaceGraph";
-    destroyGraph()
-    newScript = document.createElement('script');
-    newScript.src = graphJSFile.src;
-    document.body.appendChild(newScript);
+    if (position == null) {
+        position = replaceGraph.id
+    } else {
+        position = null;
+    }
+    reloadGraph();
     displayChartContainer()
 }
 

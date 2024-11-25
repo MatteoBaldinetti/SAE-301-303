@@ -16,7 +16,7 @@ var data = {
       ],
       hoverOffset: 4
     }]
-  };
+};
 
 var graph1 = new Chart(ctx, {
     type: "pie",
@@ -24,6 +24,11 @@ var graph1 = new Chart(ctx, {
     options: {
         maintainAspectRatio: false,
         responsive: true,
+        plugins: {
+          legend: {
+            position: position=="graph1" ? "right" : "top"
+          }
+        }
     }
 }) 
 
@@ -62,6 +67,11 @@ var graph2 = new Chart(ctx2, {
     options: {
         maintainAspectRatio: false,
         responsive: true,
+        plugins: {
+          legend: {
+            position: position=="graph2" ? "right" : "top"
+          }
+        }
     }
 }) 
 
@@ -84,6 +94,11 @@ var graph3 = new Chart(ctx3, {
   options: {
       maintainAspectRatio: false,
       responsive: true,
+      plugins: {
+        legend: {
+          position: position=="graph3" ? "right" : "top"
+        }
+      }
   }
 })
 
@@ -113,6 +128,11 @@ var graph4 = new Chart(ctx4, {
   options: {
       maintainAspectRatio: false,
       responsive: true,
+      plugins: {
+        legend: {
+          position: position=="graph4" ? "right" : "top"
+        }
+      }
   }
 }) 
 
