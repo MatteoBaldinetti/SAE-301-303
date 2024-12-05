@@ -29,39 +29,13 @@
                             </div>
                         </div>
                         <hr>
-                        <ul class="nav nav-pills flex-column mb-auto">
-                            <li class="nav-item mb-2">
-                                <a href="#" class="nav-link tabsLinks" aria-current="page">
-                                    🍅 1er onglet
-                                </a>
-                            </li>
-                            <li class="nav-item mb-2">
-                                <a href="#" class="nav-link tabsLinks">
-                                    🍎 2ème onglet
-                                </a>
-                            </li>
-                            <li class="nav-item mb-2">
-                                <a href="#" class="nav-link tabsLinks">
-                                    🌽 3ème onglet
-                                </a>
-                            </li>
-                            <li class="nav-item mb-2">
-                                <a href="#" class="nav-link tabsLinks">
-                                    🥕 4ème onglet
-                                </a>
-                            </li>
-                            <li class="nav-item mb-2">
-                                <a href="#" class="nav-link tabsLinks">
-                                    🍇 5ème onglet
-                                </a>
-                            </li>
-                            <hr>
-                            <li>
-                                <a href="#" class="nav-link returnLink">
-                                    <i class="fa-solid fa-arrow-left me-2"></i>Retour
-                                </a>
-                            </li>
-                        </ul>    
+                        <select id="projectSelector" class="form-select mt-3 mb-3" style="width: 15em;">
+                            <option selected>Sélectionner un projet</option>
+                        </select> 
+                        <hr>
+                        <a href="#" class="nav-link returnLink">
+                            <i class="fa-solid fa-arrow-left me-2"></i>Retour
+                        </a>
                     </div>
                 </div>
                 <div class="col-md-9">
@@ -79,7 +53,7 @@
                                             <div class="position-absolute top-0 end-0 maximiseButton">
                                                 <i class="fa-solid fa-maximize pt-3 pe-1" style="color: #000000;"></i>
                                             </div>
-                                            <h4 class="mt-3">Titre du graphe</h4>
+                                            <h4 class="mt-3 fs-5">Méthodes utilisées</h4>
                                             <div class="smallChartBox chartBox">
                                                 <canvas id="graph1"></canvas>
                                             </div> 
@@ -88,7 +62,7 @@
                                             <div class="position-absolute top-0 end-0 maximiseButton">
                                                 <i class="fa-solid fa-maximize pt-3 pe-1" style="color: #000000;"></i>
                                             </div>
-                                            <h4 class="mt-3">Titre du graphe</h4>
+                                            <h4 class="mt-3">Pourcentage des cultures</h4>
                                             <div class="smallChartBox chartBox">
                                                 <canvas id="graph4"></canvas>
                                             </div> 
@@ -99,27 +73,13 @@
                                 </div>
                             </div>
                             <div class="col-md-6 pb-3 whiteBackground shadowGraph position-relative animate__animated animate__zoomIn" style="flex-grow: 1">
-                                <div class="swiper mySwiper">
-                                    <div class="swiper-wrapper">
-                                        <div class="swiper-slide position-relative">
-                                            <div class="position-absolute top-0 end-0 maximiseButton">
-                                                <i class="fa-solid fa-maximize pt-3 pe-1" style="color: #000000;"></i>
-                                            </div>
-                                            <h4 class="mt-3 ps-3">Titre du graphe</h4>
-                                            <div class="smallChartBox chartBox">
-                                                <canvas id="graph2"></canvas>
-                                            </div> 
-                                        </div>
-                                        <div class="swiper-slide">
-                                            <h4 class="mt-3 ps-3">Titre du graphe</h4>
-                                            <div class="smallChartBox chartBox">
-                                                <p>test</p>
-                                            </div> 
-                                        </div>
-                                    </div>
-                                    <div class="swiper-button-next"></div>
-                                    <div class="swiper-button-prev"></div>
+                                <div class="position-absolute top-0 end-0 maximiseButton">
+                                    <i class="fa-solid fa-maximize pt-3 pe-3" style="color: #000000;"></i>
                                 </div>
+                                <h4 class="mt-3 ps-3">Avis sur les méthodes utilisées</h4>
+                                <div class="smallChartBox chartBox">
+                                    <canvas id="graph2"></canvas>
+                                </div> 
                             </div>
                         </div>
                         <div class="row mt-4 ps-3 pe-3">

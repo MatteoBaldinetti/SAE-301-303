@@ -1,14 +1,10 @@
 var ctx = document.getElementById('graph1').getContext('2d');
 
 var data = {
-    labels: [
-      'Red',
-      'Blue',
-      'Yellow'
-    ],
+    labels: Object.keys(methodes),
     datasets: [{
       label: 'My First Dataset',
-      data: [300, 50, 100],
+      data: Object.values(methodes),
       backgroundColor: [
         'rgb(255, 99, 132)',
         'rgb(54, 162, 235)',
@@ -26,6 +22,7 @@ var graph1 = new Chart(ctx, {
         responsive: true,
         plugins: {
           legend: {
+            display: position=="graph1" ? true : false,
             position: position=="graph1" ? "right" : "top"
           }
         }
@@ -35,10 +32,10 @@ var graph1 = new Chart(ctx, {
 var ctx2 = document.getElementById('graph2').getContext('2d');
 
 var data2 = {
-    labels: ["January", "February", "March", "April", "Mai", "June", "July"],
+    labels: Object.keys(avis),
     datasets: [{
       label: 'My First Dataset',
-      data: [65, 59, 80, 81, 56, 55, 40],
+      data: Object.values(avis),
       backgroundColor: [
         'rgba(255, 99, 132, 0.2)',
         'rgba(255, 159, 64, 0.2)',
@@ -69,6 +66,7 @@ var graph2 = new Chart(ctx2, {
         responsive: true,
         plugins: {
           legend: {
+            display: position=="graph2" ? true : false,
             position: position=="graph2" ? "right" : "top"
           }
         }
@@ -96,6 +94,7 @@ var graph3 = new Chart(ctx3, {
       responsive: true,
       plugins: {
         legend: {
+          display: position=="graph3" ? true : false,
           position: position=="graph3" ? "right" : "top"
         }
       }
@@ -105,14 +104,10 @@ var graph3 = new Chart(ctx3, {
 var ctx4 = document.getElementById('graph4').getContext('2d');
 
 var data4 = {
-  labels: [
-    'Purple',
-    'Green',
-    'Cyan'
-  ],
+  labels: Object.keys(cultures),
   datasets: [{
     label: 'My First Dataset',
-    data: [50, 100, 70],
+    data: Object.values(cultures),
     backgroundColor: [
       'rgb(255, 0, 255)',
       'rgb(0, 255, 0)',
@@ -130,6 +125,7 @@ var graph4 = new Chart(ctx4, {
       responsive: true,
       plugins: {
         legend: {
+          display: position=="graph4" ? true : false,
           position: position=="graph4" ? "right" : "top"
         }
       }
