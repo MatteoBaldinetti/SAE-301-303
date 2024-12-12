@@ -34,13 +34,19 @@ function readCSVFile() {
         //Différente culture utilisées en pourcentage en camembert (15)
         //Avis (13)
         //Détails
-        getDatasByProjects("4SYSLEG")
-        getPourcent(cultures, Object.values(cultures))
-        console.log(methodes)
-        console.log(cultures)
-        console.log(avis)
+        
     }  
 };
+
+function displayData() {
+    getDatasByProjects(document.getElementById("projectSelector").value);
+    getPourcent(cultures, Object.values(cultures));
+    reloadGraph();
+    document.getElementById("title").innerHTML = document.getElementById("projectSelector").value; 
+    console.log(methodes)
+    console.log(cultures)
+    console.log(avis)
+}
 
 function createOptionsSelector(map, selector) {
     let i = 0;

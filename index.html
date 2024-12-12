@@ -29,7 +29,7 @@
                             </div>
                         </div>
                         <hr>
-                        <select id="projectSelector" class="form-select mt-3 mb-3" style="width: 15em;">
+                        <select id="projectSelector" class="form-select mt-3 mb-3" style="width: 15em;" onchange="displayData()">
                             <option selected>Sélectionner un projet</option>
                         </select> 
                         <hr>
@@ -41,7 +41,7 @@
                 <div class="col-md-9">
                     <div class="row">
                         <div class="col-md-12 greenBackground text-white">
-                            <h3 class="mt-3 pb-2 animate__animated animate__slideInDown">Nom de l'onglet</h3>
+                            <h3 id="title" class="mt-3 pb-2 animate__animated animate__slideInDown">Nom de l'onglet</h3>
                         </div>
                     </div>
                     <div id="chartContainer1">
