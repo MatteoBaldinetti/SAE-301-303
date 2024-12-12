@@ -2,7 +2,12 @@ const projectSelector = document.getElementById("projectSelector");
 var map = {};
 var methodes = {};
 var cultures = {};
-var avis = {};
+var avis = {
+    "Aucun avis émis": 0,
+    "Insatisfaisant": 0,
+    "Mitigé": 0,
+    "Bon": 0
+};
 
 var xhttp = new XMLHttpRequest();
 xhttp.onreadystatechange = readCSVFile;
@@ -60,6 +65,14 @@ function createOptionsSelector(map, selector) {
 }
 
 function getDatasByProjects(value) {
+    methodes = {};
+    cultures = {};
+    avis = {
+        "Aucun avis émis": 0,
+        "Insatisfaisant": 0,
+        "Mitigé": 0,
+        "Bon": 0
+    };
     for (let i=0; i<map[value].length; i++) {
         if (methodes[map[value][i][0]] != undefined){
             methodes[map[value][i][0]] += 1;
