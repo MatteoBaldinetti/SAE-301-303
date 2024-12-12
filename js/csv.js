@@ -35,10 +35,6 @@ function readCSVFile() {
         }
         console.log(map)
         createOptionsSelector(map, projectSelector);
-        //Nom des méthodes juste le nombre en camembert (0)
-        //Différente culture utilisées en pourcentage en camembert (15)
-        //Avis (13)
-        //Détails
         // filière
         // plein terre ou pas
         // le lieu
@@ -51,9 +47,6 @@ function displayData() {
     getPourcent(cultures, Object.values(cultures));
     reloadGraph();
     document.getElementById("title").innerHTML = document.getElementById("projectSelector").value; 
-    console.log(methodes)
-    console.log(cultures)
-    console.log(avis)
 }
 
 function createOptionsSelector(map, selector) {

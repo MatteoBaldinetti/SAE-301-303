@@ -46,7 +46,6 @@ var ctx2 = document.getElementById('graph2').getContext('2d');
 var data2 = {
     labels: Object.keys(avis),
     datasets: [{
-      label: 'My First Dataset',
       data: Object.values(avis),
       backgroundColor: [
         'rgba(125, 125, 125, 0.2)',
@@ -82,18 +81,17 @@ var graph2 = new Chart(ctx2, {
 var ctx3 = document.getElementById('graph3').getContext('2d');
 
 var data3 = {
-  labels: ["January", "February", "March", "April", "Mai", "June", "July"],
+  labels: Object.keys(cultures),
   datasets: [{
     label: 'My First Dataset',
-    data: [65, 59, 80, 81, 56, 55, 40],
-    fill: false,
-    borderColor: 'rgb(75, 192, 192)',
-    tension: 0.1
+    data: Object.values(cultures),
+    backgroundColor: generateColorsArray(Object.keys(cultures)),
+    hoverOffset: 4
   }]
 };
 
 var graph3 = new Chart(ctx3, {
-  type: "line",
+  type: "pie",
   data: data3,
   options: {
       maintainAspectRatio: false,
@@ -105,38 +103,10 @@ var graph3 = new Chart(ctx3, {
         }
       }
   }
-})
-
-var ctx4 = document.getElementById('graph4').getContext('2d');
-
-var data4 = {
-  labels: Object.keys(cultures),
-  datasets: [{
-    label: 'My First Dataset',
-    data: Object.values(cultures),
-    backgroundColor: generateColorsArray(Object.keys(cultures)),
-    hoverOffset: 4
-  }]
-};
-
-var graph4 = new Chart(ctx4, {
-  type: "pie",
-  data: data4,
-  options: {
-      maintainAspectRatio: false,
-      responsive: true,
-      plugins: {
-        legend: {
-          display: position=="graph4" ? true : false,
-          position: position=="graph4" ? "right" : "top"
-        }
-      }
-  }
 }) 
 
 function destroyGraph() {
   graph1.destroy()
   graph2.destroy()
   graph3.destroy()
-  graph4.destroy()
 }
