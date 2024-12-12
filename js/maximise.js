@@ -28,6 +28,17 @@ function getGraph(maximiseButton) {
     }
 }
 
+function getTitleGraph(maximiseButton) {
+    let parent = getParent(maximiseButton);
+    for (var i = 0; i < parent.childNodes.length; i++) {
+        if (parent.childNodes[i].className != undefined) {
+            if (parent.childNodes[i].className.includes("titleGraph")) {
+                return parent.childNodes[i].innerHTML;
+            }
+        }
+    }
+}
+
 function reloadGraph() {
     destroyGraph()
     let graphJSFile = document.getElementById("graphJSFile")
@@ -53,6 +64,7 @@ function changeDisplay(maximiseButton) {
     } else {
         position = null;
     }
+    document.getElementById("titleGraphMaximise").innerHTML = getTitleGraph(maximiseButton);
     reloadGraph();
     displayChartContainer()
 }

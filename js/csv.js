@@ -39,7 +39,10 @@ function readCSVFile() {
         //Différente culture utilisées en pourcentage en camembert (15)
         //Avis (13)
         //Détails
-        
+        // filière
+        // plein terre ou pas
+        // le lieu
+        // période
     }  
 };
 
