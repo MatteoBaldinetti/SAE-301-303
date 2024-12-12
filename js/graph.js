@@ -1,3 +1,19 @@
+function randomColorGenerator(start, end) {
+  return (Math.floor(Math.random() * (end + 1 - start) + start));
+}
+
+function generateTupleColor() {
+  return ('rgb(' + randomColorGenerator(0,255) + ',' + randomColorGenerator(0,255) + ',' + randomColorGenerator(0,255) + ')');
+}
+
+function generateColorsArray(arrayValues) {
+  let colorsArray = [];
+  for (let i=0; i<arrayValues.length; i++) {
+    colorsArray.push(generateTupleColor());
+  }
+  return colorsArray;
+}
+
 var ctx = document.getElementById('graph1').getContext('2d');
 
 var data = {
@@ -5,11 +21,7 @@ var data = {
     datasets: [{
       label: 'My First Dataset',
       data: Object.values(methodes),
-      backgroundColor: [
-        'rgb(255, 99, 132)',
-        'rgb(54, 162, 235)',
-        'rgb(255, 205, 86)'
-      ],
+      backgroundColor: generateColorsArray(Object.keys(methodes)),
       hoverOffset: 4
     }]
 };
@@ -108,11 +120,7 @@ var data4 = {
   datasets: [{
     label: 'My First Dataset',
     data: Object.values(cultures),
-    backgroundColor: [
-      'rgb(255, 0, 255)',
-      'rgb(0, 255, 0)',
-      'rgb(0, 255, 255)'
-    ],
+    backgroundColor: generateColorsArray(Object.keys(cultures)),
     hoverOffset: 4
   }]
 };
