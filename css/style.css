@@ -52,7 +52,7 @@ h4 {
 }
 
 .smallChartBox {
-    height: 19em;
+    height: 37vh;
     width: 26em;
     margin: auto;
 }
@@ -62,7 +62,7 @@ h4 {
 }
 
 .maximiseGraph {
-    height: 81vh;
+    height: 82vh;
 }
 
 .swiper {
