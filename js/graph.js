@@ -71,8 +71,8 @@ var graph2 = new Chart(ctx2, {
         responsive: true,
         plugins: {
           legend: {
-            display: position=="graph2" ? true : false,
-            position: position=="graph2" ? "right" : "top"
+            display: false,
+            position: false
           }
         }
     }
