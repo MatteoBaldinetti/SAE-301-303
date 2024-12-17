@@ -21,7 +21,7 @@ var data = {
     datasets: [{
       label: 'My First Dataset',
       data: Object.values(methodes),
-      backgroundColor: generateColorsArray(Object.keys(methodes)),
+      backgroundColor: colorMethode,
       hoverOffset: 4
     }]
 };
@@ -85,7 +85,7 @@ var data3 = {
   datasets: [{
     label: 'My First Dataset',
     data: Object.values(cultures),
-    backgroundColor: generateColorsArray(Object.keys(cultures)),
+    backgroundColor: colorCulture,
     hoverOffset: 4
   }]
 };
@@ -112,7 +112,7 @@ var data4 = {
   datasets: [{
     label: 'My First Dataset',
     data: Object.values(traitement),
-    backgroundColor: generateColorsArray(Object.keys(traitement)),
+    backgroundColor: colorTraitement,
     hoverOffset: 4
   }]
 };

@@ -9,6 +9,10 @@ var avis = {
     "Bon": 0
 };
 var traitement = {};
+var colorMethode;
+var colorCulture;
+var colorTraitement;
+
 var xhttp = new XMLHttpRequest();
 xhttp.onreadystatechange = readCSVFile;
 xhttp.open("GET", '../assets/csv/data.csv')
@@ -103,6 +107,10 @@ function getDatasByProjects(value) {
     document.getElementById("terreAbri").innerHTML = map[value][0][5];
     document.getElementById("periode").innerHTML = map[value][0][6];
     document.getElementById("lieu").innerHTML = map[value][0][7] + " - " + map[value][0][8];
+    
+    colorMethode = generateColorsArray(Object.keys(methodes));
+    colorCulture = generateColorsArray(Object.keys(cultures));
+    colorTraitement = generateColorsArray(Object.keys(traitement));
 }
 
 
