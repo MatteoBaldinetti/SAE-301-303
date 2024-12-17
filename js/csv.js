@@ -8,10 +8,10 @@ var avis = {
     "Mitigé": 0,
     "Bon": 0
 };
-
+var traitement = {};
 var xhttp = new XMLHttpRequest();
 xhttp.onreadystatechange = readCSVFile;
-xhttp.open("GET", './assets/csv/data.csv')
+xhttp.open("GET", '../assets/csv/data.csv')
 xhttp.send();
 
 function readCSVFile() {
@@ -28,17 +28,13 @@ function readCSVFile() {
         array = tableauCSV;
         for (var i=1; i<array.length; i++) {
             if (map[array[i][18]] != undefined){
-                map[array[i][18]].push([array[i][0], array[i][15], array[i][13]]);
+                map[array[i][18]].push([array[i][0], array[i][15], array[i][13], array[i][3], array[i][14], array[i][16], array[i][17], array[i][19], array[i][20]]);
             } else {
-                map[array[i][18]] = [[array[i][0], array[i][15], array[i][13]]];
+                map[array[i][18]] = [[array[i][0], array[i][15], array[i][13], array[i][3], array[i][14], array[i][16], array[i][17], array[i][19], array[i][20]]];
             }    
         }
         console.log(map)
         createOptionsSelector(map, projectSelector);
-        // filière
-        // plein terre ou pas
-        // le lieu
-        // période
     }  
 };
 
@@ -69,6 +65,7 @@ function getDatasByProjects(value) {
         "Mitigé": 0,
         "Bon": 0
     };
+    traitement = {};
     for (let i=0; i<map[value].length; i++) {
         if (methodes[map[value][i][0]] != undefined){
             methodes[map[value][i][0]] += 1;
@@ -96,7 +93,16 @@ function getDatasByProjects(value) {
         } else {
             avis[map[value][i][2]] = 1;
         }  
+        if (traitement[map[value][i][3]] != undefined){
+            traitement[map[value][i][3]] += 1;
+        } else {
+            traitement[map[value][i][3]] = 1;
+        }  
     }
+    document.getElementById("filiere").innerHTML = map[value][0][4];
+    document.getElementById("terreAbri").innerHTML = map[value][0][5];
+    document.getElementById("periode").innerHTML = map[value][0][6];
+    document.getElementById("lieu").innerHTML = map[value][0][7] + " - " + map[value][0][8];
 }
 
 

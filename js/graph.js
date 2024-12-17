@@ -91,7 +91,7 @@ var data3 = {
 };
 
 var graph3 = new Chart(ctx3, {
-  type: "pie",
+  type: "doughnut",
   data: data3,
   options: {
       maintainAspectRatio: false,
@@ -105,8 +105,36 @@ var graph3 = new Chart(ctx3, {
   }
 }) 
 
+var ctx4 = document.getElementById('graph4').getContext('2d');
+
+var data4 = {
+  labels: Object.keys(traitement),
+  datasets: [{
+    label: 'My First Dataset',
+    data: Object.values(traitement),
+    backgroundColor: generateColorsArray(Object.keys(traitement)),
+    hoverOffset: 4
+  }]
+};
+
+var graph4 = new Chart(ctx4, {
+  type: "polarArea",
+  data: data4,
+  options: {
+      maintainAspectRatio: false,
+      responsive: true,
+      plugins: {
+        legend: {
+          display: position=="graph4" ? true : false,
+          position: position=="graph4" ? "right" : "top"
+        }
+      }
+  }
+}) 
+
 function destroyGraph() {
   graph1.destroy()
   graph2.destroy()
   graph3.destroy()
+  graph4.destroy()
 }
