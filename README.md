@@ -1,7 +1,6 @@
-# SAE-301-303
+# SAE-301-303 : Projet Pestisee
 
-## Projet Pestisee
-Projet réalisé par Mattéo BALDINETTI, Liam CHEURFA, Ken DINH & Vincent ROURE
+*Projet réalisé par Mattéo BALDINETTI, Liam CHEURFA, Ken DINH & Vincent ROURE*
 
 ## Lien vers le Trello
 
