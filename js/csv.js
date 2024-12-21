@@ -37,16 +37,21 @@ function readCSVFile() {
                 map[array[i][18]] = [[array[i][0], array[i][15], array[i][13], array[i][3], array[i][14], array[i][16], array[i][17], array[i][19], array[i][20]]];
             }    
         }
-        console.log(map)
         createOptionsSelector(map, projectSelector);
     }  
 };
 
-function displayData() {
-    getDatasByProjects(document.getElementById("projectSelector").value);
+function displayData(choice=undefined) {
+    if (choice == undefined) {
+        choice = document.getElementById("projectSelector").value
+    } else {
+        choice = localStorage.getItem('choice');
+    }
+    console.log(choice)
+    getDatasByProjects(choice);
     getPourcent(cultures, Object.values(cultures));
     reloadGraph();
-    document.getElementById("title").innerHTML = document.getElementById("projectSelector").value; 
+    document.getElementById("title").innerHTML = choice; 
 }
 
 function createOptionsSelector(map, selector) {

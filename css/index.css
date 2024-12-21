@@ -1,0 +1,25 @@
+body {
+    background-image: url(/assets/img/field.png);
+    background-size: cover;
+    height: 100vh;
+    overflow: hidden;
+    font-family: "Geologica", sans-serif;
+}
+
+#element {
+    margin-top: 35vh;
+}
+
+.logo > img {
+    position: absolute;
+    top: 0;
+    margin-top: 2vh;
+    margin-left: 2vw;
+}
+
+.logo > h2 {
+    position: absolute;
+    top: 0;
+    margin-left: 3em;
+    margin-top: 4vh;
+}

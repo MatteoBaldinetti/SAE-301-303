@@ -1,3 +1,7 @@
+:root {
+    --swiper-navigation-color: #6e9857;
+}
+
 body {
     background-color: #F8F8F8;
     font-family: "Geologica", sans-serif;

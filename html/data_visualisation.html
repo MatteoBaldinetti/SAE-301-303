@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Pestisee</title>
+        <title>Pestisee - Données</title>
         <!--Importation de la police d'écriture-->
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -25,17 +25,15 @@
                                 <img src="../assets/images/logo.webp" alt="Logo Pestisee" height="65em"/>
                             </div>
                             <div class="col-md-10 position-relative">
-                                <h3 class="ps-3 position-absolute top-50 start-0 translate-middle-y">Pestisee</h3>
+                                <h3 class="ps-1 position-absolute top-50 start-0 translate-middle-y">Pestisee</h3>
                             </div>
                         </div>
                         <hr>
+                        <h4>Sélectionner un projet</h4>
                         <select id="projectSelector" class="form-select mt-3 mb-3" style="width: 20vw;" onchange="displayData()">
-                            <option selected>Sélectionner un projet</option>
+                            <option selected>Liste des projets</option>
                         </select> 
                         <hr>
-                        <a href="#" class="nav-link returnLink">
-                            <i class="fa-solid fa-arrow-left me-2"></i>Retour
-                        </a>
                     </div>
                 </div>
                 <div class="col-md-9">
@@ -148,5 +146,8 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.1/chart.min.js" integrity="sha512-QSkVNOCYLtj73J4hbmVoOV6KVZuMluZlioC+trLpewV8qMjsWqlIQvkn1KGX2StWvPMdWGBqim1xlC8krl1EKQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
         <script src="../js/maximise.js"></script>
         <script id="graphJSFile" src="../js/graph.js"></script>
+        <script>
+            displayData(localStorage.getItem('choice'))
+        </script>
     </body>
 </html>
