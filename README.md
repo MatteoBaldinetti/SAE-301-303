@@ -5,7 +5,7 @@
 ## Comment faire fonctionner le site ?
 
 Pour faire fonctionner le site il faut démarrer un serveur local que ce soit avec l'extension Live Server de Visual Studio Code, XAMPP ou via Python par exemple.
-Sinon le fichier CSV ne sera pas lu (requête XMLHttp) et donc le site ne fonctionnera pas.
+Sinon le fichier CSV ne sera pas lu (requête XMLHTTP) et donc le site ne fonctionnera pas.
 
 ## Lien vers le Trello
 
